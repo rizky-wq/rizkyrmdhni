@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio Rizky Ramadhani</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+   <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm" style="background-color:rgb(255, 47, 47)">
+    <div class="container">
+        <a class="navbar-brand" href="#">RIZKY RAMADHANI</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Home Section -->
+    <section class="jumbotron text-center">
+        <img src="images/Foto Rizky.jpg" style="width: 200px;">
+        <h1 class="display-4">HELLO GUYS</h1>
+        <p class="lead">PERKENALKAN NAMA SAYA RIZKY RAMADHANI</p>
+        <p class="lead">Mata Kuliah Algoritma Pemrograman</p>
+        <p class="lead">Prodi Teknik Informatika</p>
+        <p class="lead">STIKOM MUHAMMADIYAH BATAM</p>
+    </section>
+
+    <!-- About Section -->
+    <div class="container">
+        <h1>My Project</h1>
+        <div class="row">
+            <!-- Hello World Card -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div style="background-color: white; padding: 20px; text-align: center;">
+                        <img id="helloworldImage" src="images/Hello World.jpg" class="card-img-top img-fluid" style="width: 100%; border: 5px solid #ddd; border-radius: 10px;"></div>                      
+                    <div class="card-body">
+                        <h5 class="card-title">HELLO WORLD</h5>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#helloWorldModal">
+                            TAMPILAN HELLO WORLD
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Luas Persegi Panjang Card -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div style="background-color: white; padding: 20px; text-align: center;">
+                        <img id="persegipanjangImage" src="images/Persegi panjang.jpg" class="card-img-top img-fluid" style="width: 100%; border: 5px solid #ddd; border-radius: 10px;"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">LUAS PERSEGI PANJANG</h5>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#luasPersegiModal">
+                            HITUNG LUAS
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segitiga Bintang Card -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div style="background-color: white; padding: 20px; text-align: center;">
+                        <img id="segitigabintangImage" src="images/Segitiga Bintang.jpg" class="card-img-top img-fluid" style="width: 100%; border: 5px solid #ddd; border-radius: 10px;"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">SEGITIGA BINTANG</h5>
+                        <div class="form-group">
+                            <label for="rowInput">MASUKAN JUMLAH BARIS :</label>
+                            <input type="number" class="form-control" id="rowInput" min="1">
+                        </div>
+                        <button type="button" class="btn btn-primary" id="generateBtn">TAMPILAN SEGITIGA</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kipas Angin Card -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img id="fanImage" src="images/mati.png" class="card-img-top img-fluid" alt="Kipas Mati">
+                    <div class="card-body">
+                        <h5 class="card-title">KIPAS ANGIN</h5>
+                        <p class="card-text">Klik tombol untuk menghidupkan atau mematikan kipas angin</p>
+                        <button id="startButton" class="btn btn-primary">Hidupkan</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Simulasi Lampu Card -->
+            <div class="col-md-12 mt-4">
+                <h2 class="text-center">Simulasi 5 Lampu</h2>
+                <p class="text-center">Klik tombol stop kontak untuk menghidupkan atau mematikan semua lampu</p>
+                <div class="text-center">
+                    <button id="stopKontakButton" class="btn btn-primary mb-4">Hidupkan Stop Kontak</button>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-2"><img id="lamp1" src="images/lamp_off.png" alt="Lampu 1" class="img-fluid mb-2"><p>Lampu 1</p></div>
+                    <div class="col-md-2"><img id="lamp2" src="images/lamp_off.png" alt="Lampu 2" class="img-fluid mb-2"><p>Lampu 2</p></div>
+                    <div class="col-md-2"><img id="lamp3" src="images/lamp_off.png" alt="Lampu 3" class="img-fluid mb-2"><p>Lampu 3</p></div>
+                    <div class="col-md-2"><img id="lamp4" src="images/lamp_off.png" alt="Lampu 4" class="img-fluid mb-2"><p>Lampu 4</p></div>
+                    <div class="col-md-2"><img id="lamp5" src="images/lamp_off.png" alt="Lampu 5" class="img-fluid mb-2"><p>Lampu 5</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal fade" id="helloWorldModal" tabindex="-1" role="dialog" aria-labelledby="helloWorldLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="helloWorldLabel">Hello World</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">Hello World!</div>
+                <div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="luasPersegiModal" tabindex="-1" role="dialog" aria-labelledby="luasPersegiLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header"><h5 class="modal-title">Luas Persegi Panjang</h5></div>
+                <div class="modal-body">
+                    <p>Masukkan panjang dan lebar:</p>
+                    <input type="number" id="panjang" placeholder="Panjang" class="form-control mb-2">
+                    <input type="number" id="lebar" placeholder="Lebar" class="form-control mb-2">
+                    <button class="btn btn-success" onclick="hitungLuas()">Hitung</button>
+                    <div id="luasResult" class="mt-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="resultModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header"><h5>Hasil Segitiga Bintang</h5></div>
+                <div class="modal-body" id="resultContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script>
+        function hitungLuas() {
+            const panjang = document.getElementById('panjang').value;
+            const lebar = document.getElementById('lebar').value;
+            document.getElementById('luasResult').innerText = `Luas: ${panjang * lebar}`;
+        }
+
+        document.getElementById('generateBtn').addEventListener('click', function() {
+            const rows = document.getElementById('rowInput').value;
+            let result = '';
+            for (let i = 1; i <= rows; i++) {
+                result += ' '.repeat(rows - i) + '* '.repeat(i) + '<br>';
+            }
+            document.getElementById('resultContent').innerHTML = result;
+            $('#resultModal').modal('show');
+        });
+
+        document.getElementById('startButton').addEventListener('click', function() {
+            const fan = document.getElementById('fanImage');
+            const button = document.getElementById('startButton');
+            if (fan.src.includes('mati')) {
+                fan.src = 'images/hidup.gif';
+                button.textContent = 'Matikan';
+                button.classList.remove('btn-primary');
+                button.classList.add('btn-danger');
+            } else {
+                fan.src = 'images/mati.png';
+                button.textContent = 'Hidupkan';
+                button.classList.remove('btn-danger');
+                button.classList.add('btn-primary');
+            }
+        });
+
+        document.getElementById('stopKontakButton').addEventListener('click', function() {
+            const lamps = ['lamp1', 'lamp2', 'lamp3', 'lamp4', 'lamp5'];
+            const button = document.getElementById('stopKontakButton');
+            const firstLamp = document.getElementById(lamps[0]);
+            const isOn = firstLamp.src.includes('lamp_on');
+
+            lamps.forEach(id => {
+                document.getElementById(id).src = isOn ? 'images/lamp_off.png' : 'images/lamp_on.png';
+            });
+
+            if (isOn) {
+                button.textContent = 'Hidupkan Stop Kontak';
+                button.classList.remove('btn-danger');
+                button.classList.add('btn-primary');
+            } else {
+                button.textContent = 'Matikan Stop Kontak';
+                button.classList.remove('btn-primary');
+                button.classList.add('btn-danger');
+            }
+        });
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lembar Jawaban Pilihan Ganda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #e6f7ff;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        td:hover {
+            background-color: #d1ecf1;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background-color: #218838;
+            transform: scale(1.1);
+        }
+        #result {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #17a2b8;
+            margin-top: 20px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .correct {
+            color: #28a745;
+            animation: pulseCorrect 1s ease-in-out infinite alternate;
+        }
+        .incorrect {
+            color: #dc3545;
+            animation: pulseIncorrect 1s ease-in-out infinite alternate;
+        }
+        @keyframes pulseCorrect {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.1);
+            }
+        }
+        @keyframes pulseIncorrect {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="text-align: center; color: #007bff;">Koreksi Lembar Jawaban</h1>
+
+<table>
+    <tr>
+        <th>No</th>
+        <th>Jawaban Anda</th>
+        <th>Jawaban Benar</th>
+        <th>Hasil</th>
+    </tr>
+    <tbody id="answerTable">
+        <!-- Rows will be added by JavaScript -->
+    </tbody>
+</table>
+
+<button onclick="checkAnswers()">Koreksi Jawaban</button>
+
+<p id="result"></p>
+
+<script>
+    // Kunci jawaban benar
+    const correctAnswers = ['A', 'B', 'C', 'D', 'E', 'A', 'B', 'C', 'D', 'E', 'A', 'B', 'C', 'D', 'E', 'A', 'B', 'C', 'D', 'E'];
+
+    // Fungsi untuk membuat tabel jawaban
+    function createTable() {
+        const tableBody = document.getElementById('answerTable');
+        for (let i = 0; i < 20; i++) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${i + 1}</td>
+                <td>
+                    <select id="answer${i}">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                    </select>
+                </td>
+                <td>${correctAnswers[i]}</td>
+                <td id="result${i}">-</td>
+            `;
+            tableBody.appendChild(row);
+        }
+    }
+
+    // Fungsi untuk mengecek jawaban
+    function checkAnswers() {
+        let correctCount = 0;
+        let incorrectCount = 0;
+
+        for (let i = 0; i < 20; i++) {
+            const userAnswer = document.getElementById(`answer${i}`).value;
+            const resultCell = document.getElementById(`result${i}`);
+
+            if (userAnswer === correctAnswers[i]) {
+                resultCell.textContent = 'Benar';
+                resultCell.className = 'correct';
+                correctCount++;
+            } else {
+                resultCell.textContent = 'Salah';
+                resultCell.className = 'incorrect';
+                incorrectCount++;
+            }
+        }
+
+        document.getElementById('result').textContent = `Jawaban Benar: ${correctCount}, Jawaban Salah: ${incorrectCount}`;
+    }
+
+    // Buat tabel jawaban saat halaman dimuat
+    window.onload = createTable;
+</script>
+
+<!-- Social Media Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #1E90FF; position: fixed; bottom: 0; width: 100%;">
+    <div class="container justify-content-center">
+        <ul class="navbar-nav">
+            <li class="nav-item text-center">
+                <a class="nav-link text-white" href="https://youtu.be/79Px2lHeb74" target="_blank" title="YouTube" style="font-size: 18px; transition: all 0.3s ease-in-out;">
+                    <i class='bx bxl-youtube' style="font-size: 24px; margin-right: 8px;"></i> YouTube
+                </a>
+                <span class="text-white d-block" style="font-size: 14px;">CHECK VIDEO CHANNEL SAYA DI YOUTUBE UNTUK, TUGAS 15 TENTANG PROGRAM DATABASE MAHASISWA</span>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Add these links to the head section for icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.7/css/boxicons.min.css" rel="stylesheet">
+
+<!-- Add this style in the head or a CSS file for additional effects -->
+<style>
+    .navbar-nav .nav-item .nav-link:hover {
+        background-color: #FF4500;
+        color: #FFF;
+        transform: scale(1.1);
+    }
+
+    .navbar-nav .nav-item .nav-link i {
+        animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+
+    .navbar-nav .nav-item span {
+        font-size: 14px;
+        margin-top: 4px;
+    }
+</style>
+
+</body>
+</html>
